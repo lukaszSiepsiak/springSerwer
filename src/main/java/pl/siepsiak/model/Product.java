@@ -19,14 +19,14 @@ public class Product implements Serializable {
     private String name;
     @NotNull
     private Float price;
-    
-    public Product(){}
+
+    public Product() {
+    }
 
     public Product(@NotNull @NotEmpty String name, @NotNull @NotEmpty Float price) {
         this.name = name;
         this.price = price;
     }
-
 
     public Long getId() {
         return id;
@@ -40,7 +40,6 @@ public class Product implements Serializable {
         return name;
     }
 
-    
     public void setName(String name) {
         this.name = name;
     }
