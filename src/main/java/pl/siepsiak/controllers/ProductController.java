@@ -20,7 +20,7 @@ public class ProductController {
     public ResponseEntity<List<Product>> getProducts() {
         List<Product> products = productService.listAll();
         if (products.isEmpty()) {
-            return new ResponseEntity<>(products,HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(products,HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
